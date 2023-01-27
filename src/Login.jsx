@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Register } from "./Register";
 
 export const Login = (props) => {
 const[email, setEmail] = useState ('');
@@ -13,7 +12,7 @@ const handleSubmit = (e) =>  {
 
     return (
         <div className="auth-form-container">
-            <h2>Login</h2>
+            <h2>Student Login</h2>
             <form className="login-form"onSubmit= {handleSubmit}>
                 <label htmlFor="email"> Email </label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder= "youremail@gmail.com" id="email" name="email"/>
