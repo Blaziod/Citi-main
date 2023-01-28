@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 
 export const ProposeTopic = (props) => {
     const [matric, setMatric] = useState('');
-    const [topic, setTopic] = useState('');
+    const [topic1, setTopic1] = useState('');
+    const [topic2, setTopic2] = useState('');
+    const [topic3, setTopic3] = useState('');
 
 
     const data = [
@@ -39,14 +41,16 @@ export const ProposeTopic = (props) => {
                 <label htmlFor="matric"> Matric Number </label>
                 <input value={matric} onChange={(e) => setMatric(e.target.value)} type="matric" placeholder="cp/program/department/number" id="matric" name="matric" />
 
-                <label htmlFor="topic"> Project Topic 1</label>
-                <input value={topic} onChange={(e) => setTopic(e.target.value)} type="topic" placeholder="Type in your first project topic" id="topic" name="topic" />
+                <label htmlFor="topic1"> Project Topic 1</label>
+                <input value={topic1} onChange={(e) => setTopic1(e.target.value)} type="topic1" placeholder="Type in your first project topic" id="topic1" name="topic1" />
 
-                <label htmlFor="topic"> Project Topic 2</label>
-                <input value={topic} onChange={(e) => setTopic(e.target.value)} type="topic" placeholder="Type in your second project topic" id="topic" name="topic" />
+                <label htmlFor="topic2"> Project Topic 2</label>
+                <input value={topic2} onChange={(e) => setTopic2(e.target.value)} type="topic2" placeholder="Type in your first project topic" id="topic2" name="topic2" />
+                {/* <input value={topic} onChange={(e) => setTopic(e.target.value)} type="topic" placeholder="Type in your second project topic" id="topic" name="topic" /> */}
 
-                <label htmlFor="topic"> Project Topic 3</label>
-                <input value={topic} onChange={(e) => setTopic(e.target.value)} type="topic" placeholder="Type in your third project topic" id="topic" name="topic" />
+                <label htmlFor="topic3"> Project Topic 3</label>
+                <input value={topic3} onChange={(e) => setTopic3(e.target.value)} type="topic3" placeholder="Type in your first project topic" id="topic3" name="topic3" />
+              
                 <div className="form-grid-layout">
                     <div className="input-group">
 
