@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   align-items: center;
   justify-content: center;
   color: white;
@@ -13,6 +13,13 @@
   display: flex;
   flex-direction: column;
 }
+
+.Dropdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
 
 .form-grid-layout {
   display: grid;
@@ -29,7 +36,7 @@
   }
 }
 
-.input-group{
+.input-group {
   display: flex;
   flex-direction: column;
   align-items: stretch;

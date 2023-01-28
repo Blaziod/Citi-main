@@ -1,26 +1,33 @@
 import React, { useState } from "react";
 import { Multiselect } from 'multiselect-react-dropdown';
+import { Link } from "react-router-dom";
 
 
 export const ProposeTopic = (props) => {
     const [matric, setMatric] = useState('');
     const [topic, setTopic] = useState('');
-   
-    
+
+
     const data = [
         { Department: 'Computer Science', id: 1 },
         { Department: 'Electrical Engineering', id: 2 }
     ]
 
+    const sem = [
+        { Semester: "One", id: 1 },
+        { Semester: 'Two', id: 2 },
+        { Semester: 'Three', id: 1 },
+        { Semester: 'Four', id: 2 }
+
+    ]
+
     const [options] = useState(data);
+    const [ooptions] = useState(sem);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(matric);
 
-        
-
-       
 
     }
 
@@ -40,11 +47,20 @@ export const ProposeTopic = (props) => {
 
                 <label htmlFor="topic"> Project Topic 3</label>
                 <input value={topic} onChange={(e) => setTopic(e.target.value)} type="topic" placeholder="Type in your third project topic" id="topic" name="topic" />
-                <div className="login-form" style={{ width: "100vh", justifyContent: "center", display: "flex" }}>
-                
-                <label htmlFor='Department'> Select your department</label>  
-                    <Multiselect options={options} displayValue = {'Department'} />
+                <div className="form-grid-layout">
+                    <div className="input-group">
+
+                        <label htmlFor='Department'> Select your department</label>
+                        <Multiselect options={options} displayValue={'Department'} className="register-input" />
+
+                    </div>
+                    <div className="input-group">
+
+                        <label htmlFor='Semester'> Select your semester</label>
+                        <Multiselect options={ooptions} displayValue={'Semester'} className="register-input" />
+                    </div>
                 </div>
+                <Link to="/"><button className="register-submit-btn" type="submit">Submit</button></Link>
             </form>
 
         </div>

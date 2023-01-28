@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Login = (props) => {
 const[email, setEmail] = useState ('');
@@ -19,9 +20,9 @@ const handleSubmit = (e) =>  {
             
                 <label htmlFor="password"> Password </label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder= "********" id="password" name="password"/>
-                <button type="submit">Log In</button>
+                <Link to="/Pages/Home"><button type="submit">Log In</button></Link>
             </form>
-            <button className="link-btn"onClick={() => props.onFormSwitch('Register')} >Don't have an account? Register here.</button>
+            <Link to="/Register"><button className="link-btn">Don't have an account? Register here.</button></Link>
          </div>
     )
 
